@@ -8,14 +8,14 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 LOGGER = logging.getLogger(__name__)
 
 class Config(object):
-    APP_ID = int(os.environ.get("APP_ID", 12345))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    BOT_USERNAME = os.environ.get('BOT_USERNAME','')
+    APP_ID = int(os.environ.get("APP_ID", "28450765"))
+    API_HASH = os.environ.get("API_HASH", "36f00f11f9d5c65e69b81fd804453a93")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7620149291:AAF2AsPcyBKQaEcE1Tz5CQZyhcTDHW4Fg5A")
+    BOT_USERNAME = os.environ.get('BOT_USERNAME','STK_xTagBot')
     if not BOT_USERNAME.startswith('@'): BOT_USERNAME = '@' + BOT_USERNAME # bu satıra dokunmayın.
     SEND_AS_REPLY = int(os.environ.get("SEND_AS_REPLY", "0"))
-    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", '')
-    CHANNEL_OR_CONTACT = os.environ.get("CHANNEL_OR_CONTACT", 'HuzunluArtemis')
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", 'STK_Animes')
+    CHANNEL_OR_CONTACT = os.environ.get("CHANNEL_OR_CONTACT", 'Soutick_09')
     JOIN_CHANNEL_STR = os.environ.get('JOIN_CHANNEL_STR',
         "Merhaba / Hi {}\n\n" + \
         "🇬🇧 First subscribe my channel from button, then send /start again.\n" + \
@@ -26,7 +26,7 @@ class Config(object):
     OWNER_ID = int(os.environ.get('OWNER_ID', 0)) # give your owner id # if given 0 shell will not works
     AUTH_IDS = [int(x) for x in os.environ.get("AUTH_IDS", "0").split()] # if open to everyone give 0
     # forcesub vars
-    FORCE_SUBSCRIBE_CHANNEL = os.environ.get('FORCE_SUBSCRIBE_CHANNEL', '') # force subscribe channel link.
+    FORCE_SUBSCRIBE_CHANNEL = os.environ.get('FORCE_SUBSCRIBE_CHANNEL', 'https://t.me/STK_Animes') # force subscribe channel link.
     if FORCE_SUBSCRIBE_CHANNEL == "" or FORCE_SUBSCRIBE_CHANNEL == " " or FORCE_SUBSCRIBE_CHANNEL == None: FORCE_SUBSCRIBE_CHANNEL = None # bu satıra dokunmayın.
     LOGGER.info(f"FORCE_SUBSCRIBE_CHANNEL: {FORCE_SUBSCRIBE_CHANNEL}") # debug
     # commands
